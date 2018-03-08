@@ -22,9 +22,15 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	//ルートへのハンドラー
+	//ハンドラー
 	http.Handle("/", &templateHandler{filename: "index.html"})
 	http.Handle("/select", &templateHandler{filename: "select.html"})
+	http.HandleFunc("/result", func(w http.ResponseWriter, r *http.Request) {
+		r.ParseForm()
+
+		tmpl := template.Must(template.ParseFiles("./templates/result.html"))
+		tmpl.Execute(w, r.Form)
+	})
 
 	//サーバースタート
 	if err := http.ListenAndServe(":9000", nil); err != nil {
