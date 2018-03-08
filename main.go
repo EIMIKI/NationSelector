@@ -24,6 +24,7 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 func main() {
 	//ルートへのハンドラー
 	http.Handle("/", &templateHandler{filename: "index.html"})
+	http.Handle("/select", &templateHandler{filename: "select.html"})
 
 	//サーバースタート
 	if err := http.ListenAndServe(":9000", nil); err != nil {
