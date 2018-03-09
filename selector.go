@@ -13,7 +13,9 @@ type reqData struct {
 }
 
 func selector(req reqData) (nation string) {
-	db, err := sql.Open("mysql", "username:password@/nationsDb")
+	user := dbUser{}
+	user.setDbUser()
+	db, err := sql.Open("mysql", user.userName+":"+user.userPassword+"@/nationsDb")
 	if err != nil {
 		log.Fatal("sql.Open:", err)
 	}

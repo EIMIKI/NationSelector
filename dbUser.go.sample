@@ -1,0 +1,11 @@
+package main
+
+type dbUser struct {
+	userName     string
+	userPassword string
+}
+
+func (du *dbUser) setDbUser() {
+	du.userName = "Your username"
+	du.userPassword = "Your password"
+}
