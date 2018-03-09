@@ -23,6 +23,7 @@ func (t *templateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	//ハンドラー
+	http.Handle("/stylesheets/", http.StripPrefix("/stylesheets/", http.FileServer(http.Dir("stylesheets/"))))
 	http.Handle("/", &templateHandler{filename: "index.html"})
 	http.Handle("/select", &templateHandler{filename: "select.html"})
 	http.HandleFunc("/result", func(w http.ResponseWriter, r *http.Request) {
