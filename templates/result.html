@@ -1,1 +1,38 @@
-{{ . }}
+<html>
+<head>
+  <title>NationSelector-HoI4</title>
+  <style>
+  body{
+    text-align: center;
+  }
+  span{
+    font-size: 50%;
+  }
+  a{
+    text-decoration: none;
+    border: 1px solid gray;
+    padding-top:50px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    color:white;
+    background: lightgreen;
+  }
+  a:hover{
+    background: lightgray;
+  }
+  .result_text{
+    margin-top: 20%;
+    font-size: 500%;
+    margin-bottom:30px;
+  }
+  </style>
+</head>
+<body>
+  <div class="result_text">
+    <span>あなたの国は</span>「{{ . }}」
+  </div>
+  <div class="link_to_select">
+    <a href="/select">条件を変更</a>
+  </div>
+</body>
+</html>
