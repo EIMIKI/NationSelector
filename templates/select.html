@@ -5,18 +5,44 @@
 <body>
   選択画面
   <form method="post" action="/result">
+    地域<br />
+    <input type="radio" name="area" value=1 />北アメリカ
+    <input type="radio" name="area" value=2 />中央アメリカ・カリブ海
+    <input type="radio" name="area" value=3 />南アメリカ
+    <input type="radio" name="area" value=3 />アフリカ
+    <input type="radio" name="area" value=4 />ヨーロッパ
+    <input type="radio" name="area" value=5 />東アジア・南アジア
+    <input type="radio" name="area" value=6 />西アジア
+    <input type="radio" name="area" value=7 />オセアニア・東南アジア
+    <input type="radio" name="area" value=0 checked/>指定なし
+    <br />
+
+    イデオロギー<br />
+    <input type="radio" name="ideology" value=1 />民主主義
+    <input type="radio" name="ideology" value=2 />ファシスト
+    <input type="radio" name="ideology" value=3 />共産主義
+    <input type="radio" name="ideology" value=4 />中道
+    <input type="radio" name="ideology" value=0 checked/>指定なし
+    <br />
+
     陣営<br />
     <input type="radio" name="team" value=1 />連合国
     <input type="radio" name="team" value=2 />枢軸国
     <input type="radio" name="team" value=3 />コミンテルン
     <input type="radio" name="team" value=4 />無所属
-    <input type="radio" name="team" value=5 checked/>指定なし
+    <input type="radio" name="team" value=0 checked/>指定なし
+
+    <br />
+    海軍の有無<br />
+    <input type="radio" name="sea" value=1 />あり
+    <input type="radio" name="sea" value=2 />なし
+    <input type="radio" name="sea" value=0 checked/>指定なし
 
     <br />
     国家方針<br />
     <input type="radio" name="nf" value=1 />固有
     <input type="radio" name="nf" value=2 />汎用
-    <input type="radio" name="nf" value=3 checked/>指定なし
+    <input type="radio" name="nf" value=0 checked/>指定なし
 
     <br />
     <input type="submit" value="決定" />
