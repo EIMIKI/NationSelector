@@ -6,17 +6,17 @@
   選択画面
   <form method="post" action="/result">
     陣営<br />
-    <input type="radio" name="team" value="UN" />連合国
-    <input type="radio" name="team" value="AXIS" />枢軸国
-    <input type="radio" name="team" value="COMIN" />コミンテルン
-    <input type="radio" name="team" value="FREE" />無所属
-    <input type="radio" name="team" value="NONE" checked/>指定なし
+    <input type="radio" name="team" value=1 />連合国
+    <input type="radio" name="team" value=2 />枢軸国
+    <input type="radio" name="team" value=3 />コミンテルン
+    <input type="radio" name="team" value=4 />無所属
+    <input type="radio" name="team" value=5 checked/>指定なし
 
     <br />
     国家方針<br />
-    <input type="radio" name="nF" value="original" />固有
-    <input type="radio" name="nF" value="common" />汎用
-    <input type="radio" name="nF" value="none" checked/>指定なし
+    <input type="radio" name="nf" value=1 />固有
+    <input type="radio" name="nf" value=2 />汎用
+    <input type="radio" name="nf" value=3 checked/>指定なし
 
     <br />
     <input type="submit" value="決定" />
