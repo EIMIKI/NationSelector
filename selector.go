@@ -21,8 +21,8 @@ func selector(req reqData) (nation string) {
 	}
 	defer db.Close()
 
-	var sqlStr string = "select nation_name from nations where "
-	var flag bool = false
+	sqlStr := "select nation_name from nations where "
+	var flag bool
 	if req.area != "0" {
 		sqlStr += "area_id=" + req.area + " "
 		flag = true
